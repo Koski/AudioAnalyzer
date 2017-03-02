@@ -6,7 +6,7 @@ import json
 import librosa
 import StringIO
 
-from plotter import get_wave_plot, get_spec_plot, get_log_amp, get_chroma
+from plotter import get_matplot_wave_plot, get_spec_plot, get_log_amp_spec_matplot, get_matplot_chroma
 from categorizer import extract_current_class, extract_class
 from flask import Flask, request, render_template, send_file, make_response
 
@@ -30,7 +30,7 @@ def category(filename):
 @app.route('/wave_plot/<filename>')
 def wave_plot(filename):
     fn = ''.join(["static/music/", filename])
-    fig = get_wave_plot(fn)
+    fig = get_matplot_wave_plot(fn)
     img = StringIO.StringIO()
     fig.savefig(img)
     img.seek(0)
@@ -48,7 +48,7 @@ def spec_plot(filename):
 @app.route('/log_amp_plot/<filename>')
 def log_amp_plot(filename):
     fn = ''.join(["static/music/", filename])
-    fig = get_log_amp(fn)
+    fig = get_log_amp_spec_matplot(fn)
     img = StringIO.StringIO()
     fig.savefig(img)
     img.seek(0)
@@ -57,7 +57,7 @@ def log_amp_plot(filename):
 @app.route('/chroma_plot/<filename>')
 def chroma_plot(filename):
     fn = ''.join(["static/music/", filename])
-    fig = get_chroma(fn)
+    fig = get_matplot_chroma(fn)
     img = StringIO.StringIO()
     fig.savefig(img)
     img.seek(0)
