@@ -1,7 +1,10 @@
-import librosa
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import specgram
+import librosa
+import librosa.display
 
 
 def get_wave_plot(sound_name):

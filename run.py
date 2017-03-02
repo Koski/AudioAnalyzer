@@ -5,7 +5,6 @@ import random
 import json
 import librosa
 import StringIO
-import matplotlib.pyplot as plt
 
 from plotter import get_wave_plot, get_spec_plot, get_log_amp, get_chroma
 from categorizer import extract_current_class, extract_class
