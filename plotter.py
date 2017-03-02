@@ -64,5 +64,5 @@ def get_log_amp_spec_matplot(sound_name):
     fig = plt.figure(figsize=(15,2))
     fig.suptitle("Log amplitude", fontsize=12)
     D = librosa.logamplitude(np.abs(librosa.stft(raw_sound))**2, ref_power=np.max)
-    plt.imshow(D, aspect='auto', cmap='inferno')
+    plt.imshow(D, aspect='auto')
     return fig
