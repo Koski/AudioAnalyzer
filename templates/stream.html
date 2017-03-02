@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block play %}
+<div id = "container">
+    <audio controls id="audio_player">
+            <source src="http://icelive0.80692-icelive0.cdn.qbrick.com/10565/80692_RadioRock.mp3" type="audio/mp3" id="audio_player_src">
+    </audio>
+    <script type=text/javascript src="{{url_for('static', filename='javascript/audio_player.js') }}"></script>
+    <div id = "control_buttons">
+        <div id="start"><button onclick="startPlayer()">Start</button></div>
+        <div id="stop"><button onclick="stopPlayer()">Stop</button></div>
+    </div>
+    <div>
+        <div id="category"> Category:<div id = "category_value"></div></div>
+    </div>
+    <div id = "probabilities">
+        <h4>Probabilities</h4>
+        <div>
+            <div id = "music_probability">Music: <div id = "music_probability_value"></div> % </div>
+        </div>
+        <div>
+            <div id = "speech_probability">Speech: <div id = "speech_probability_value"></div> %</div>
+        </div>
+        <div>
+            <div id = "ads_probability">Ads: <div id = "ads_probability_value"></div>%</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

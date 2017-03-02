@@ -1,0 +1,147 @@
+#container {
+    margin-right: 40%;
+    margin-left: 40%;
+}
+
+#nav_bar {
+    height: 10%;
+    width:100%;
+    margin-bottom: 30px;
+    background-color: #001f3f;
+}
+
+#perc_div {
+    display: inline-block;
+    margin-top:5px;
+    width: 100%
+}
+
+#plot_parent {
+    min-width: 100%
+}
+
+.plot {
+    margin: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    height:700px;
+    background-color: #7FDBFF;
+    margin: 0px;
+}
+
+#parent {
+    height: 100%;
+    position: relative;
+    background-color: #7FDBFF;
+}
+
+#player {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+#start,
+#stop,
+#music_probability,
+#music_probability_value,
+#speech_probability,
+#speech_probability_value,
+#ads_probability,
+#ads_probability_value,
+#category {
+    display: inline-block;
+}
+
+#category {
+    width: 100%
+}
+
+.animate
+{
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+    position: relative;
+    margin: 0px 10px 10px 0px;
+    float: left;
+    border-radius: 10px;
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    font-size: 25px;
+    color: #FFF;
+    text-decoration: none;
+    width:32%;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.blue
+{
+    background-color: #3498DB;
+    border-bottom: 5px solid #2980B9;
+    text-shadow: 0px -2px #2980B9;
+}
+
+.green
+{
+    background-color: #82BF56;
+    border-bottom: 5px solid #669644;
+    text-shadow: 0px -2px #669644;
+    width: 100%;
+}
+
+.action-button:active
+{
+    transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
+
+.play-button-outer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    cursor: pointer;
+}
+
+.play-button {
+    display: flex;
+    flex-direction:column;
+    margin: 0 auto;
+    top: 25%;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2.5em 0 2.5em 5em;
+    border-color: transparent transparent transparent #000;
+    opacity: .75;
+}
+
+.play-button-outer:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#category_value {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 75px;
+    font-size: xx-large;
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
+.play-button-outer:hover .play-button {
+  opacity: 1;
+}

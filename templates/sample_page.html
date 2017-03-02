@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block play %}
+<div id = "container">
+<audio id = "audio_player">
+    <source id="sample_name" src="/static/music/{{ music_sample }}" type="audio/wav">
+    Your browser does not support this audio format.
+</audio>
+<script type=text/javascript src="{{url_for('static', filename='javascript/audio_player.js') }}"></script>
+<div id = "player">
+    <div class="play-button-outer">
+        <div onclick="play()" class="play-button"></div>
+    </div>
+    <div id = "category_value"></div>
+</div>
+
+<div id="categorize"><button onclick="get_category()" class = "action-button shadow animate green category-button">Categorize</button></div>
+<div id="perc_div">
+    <div id = "music_probability"> <div id = "music_probability_value"></div> </div>
+    <div id = "speech_probability"> <div id = "speech_probability_value"></div></div>
+    <div id = "ads_probability"><div id = "ads_probability_value"></div></div>
+  </div>
+</div>
+ <div id = "plot_parent">
+    <img src="{{ url_for('.wave_plot', filename = music_sample)}}" alt="Image Placeholder" height="200" class="plot">
+    <img src="{{ url_for('.spec_plot', filename = music_sample)}}" alt="Image Placeholder" height="200" class="plot">
+    <img src="{{ url_for('.log_amp_plot', filename = music_sample)}}" alt="Image Placeholder" height="200" class="plot">
+    <img src="{{ url_for('.chroma_plot', filename = music_sample)}}" alt="Image Placeholder" height="200" class="plot">
+ </div>
+{% endblock %}

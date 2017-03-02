@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type = "text/css" href = "{{ url_for('static',filename='css/styles.css') }}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>Audio analyzer - {{ title }}</title>
+</head>
+<body>
+    <div id = "parent">
+{% block navigation%}
+    <div id = "nav_bar">
+        <a href="/" class="action-button shadow animate blue">Index</a>
+        <a href="/stream" class="action-button shadow animate blue">Stream</a>
+        <a href="/audio" class="action-button shadow animate blue">Samples</a>
+    </div>
+{% endblock %}
+{% block play%}{% endblock %}
+    </div>
+</body>
+</html>
