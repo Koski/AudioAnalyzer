@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block play %}
-<h2>Audio samples</h2>
 <div id = "sample_list">
+    <h2>Audio samples</h2>
     {% for sample in music_files %}
         <div> <a href="{{sample}}">{{ sample }}</a></div>
     {% endfor %}
